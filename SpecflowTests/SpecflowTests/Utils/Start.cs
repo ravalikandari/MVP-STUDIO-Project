@@ -11,17 +11,19 @@ using static SpecflowPages.CommonMethods;
 
 namespace SpecflowTests.Utils
 {
+    [Binding]
     public class Start : Driver
     {
         [BeforeScenario]
         public void SetUp()
         {
+            //Launch the browser
             Initialize();
             Thread.Sleep(500);
 
+            //Call the Login Class            
             SpecflowPages.Utils.LoginPage.LoginStep();
-                  
-            
+
         }
 
         [AfterScenario]
@@ -29,14 +31,12 @@ namespace SpecflowTests.Utils
         {
             Thread.Sleep(500);
             // Screenshot
-            String img = SaveScreenShotClass.SaveScreenshot(Driver.driver, "Report");//AddScreenCapture(@"E:\Dropbox\VisualStudio\Projects\Beehive\TestReports\ScreenShots\");
-            test.Log(LogStatus.Info, "Image example: " + img);
-
+            /*string img = SaveScreenShotClass.SaveScreenshot(Driver.driver, "Report");
+            test.Log(LogStatus.Info, "Snapshot below: " + test.AddScreenCapture(img));
             // end test. (Reports)
             CommonMethods.extent.EndTest(CommonMethods.test);
-
             // calling Flush writes everything to the log file (Reports)
-            CommonMethods.extent.Flush();
+            CommonMethods.extent.Flush();*/
 
             //Close the browser
             Close();

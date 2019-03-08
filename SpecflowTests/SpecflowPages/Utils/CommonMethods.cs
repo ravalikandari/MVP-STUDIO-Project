@@ -2,9 +2,11 @@
 using RelevantCodes.ExtentReports;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 namespace SpecflowPages
 {
@@ -36,8 +38,7 @@ namespace SpecflowPages
         }
         #endregion
 
-
-
+       
         //ExtentReports
         #region reports
         public static ExtentTest test;
@@ -49,8 +50,7 @@ namespace SpecflowPages
         }
 
         #endregion
-
-
+        
 
         //Element Present
         #region Element Present

@@ -17,14 +17,17 @@ namespace SpecflowPages.Utils
             Driver.NavigateUrl();
             Thread.Sleep(1000);
 
+            //click on sign in
+            Driver.driver.FindElement(By.XPath("//*[@id='home']/div/div/div[1]/div/a")).Click();
+
             //Enter Username
-            Driver.driver.FindElement(By.XPath("//*[@id='UserName']")).SendKeys("vincent.nguyen@mvpstudio.co.nz");
+            Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[1]/input")).SendKeys("ravalikandari@gmail.com");
 
             //Enter password
-            Driver.driver.FindElement(By.XPath("//*[@id='Password']")).SendKeys("ntmv2682");
+            Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[2]/input")).SendKeys("123456");
             Thread.Sleep(1000);
             //Click on Login Button
-            Driver.driver.FindElement(By.XPath("//*[@id='sign_in']/div[1]/div[4]/button")).Click();
+            Driver.driver.FindElement(By.XPath("/html/body/div[2]/div/div/div[1]/div/div[4]/button")).Click();
 
             //string msg = "Add New Job";
             //string Actualmsg = Driver.driver.FindElement(By.XPath("//*[@id='addnewjob']")).Text;

@@ -1,14 +1,10 @@
 ﻿Feature: SpecFlowFeature1
-	In order to check for a property 
-	As a Property Owner
-	I want to search the property by name
+	In order to update my profile 
+	As a skill trader
+	I want to add the language that I know
 
 @mytag
-Scenario Outline: Search A Proeprty With Valid Name
-	Given I clicked on the Your Properties page
-	When I search for a property by its <Name>
-	Then I property should appear in the search list
-	
-	Examples: 
-	| Name   |
-	| Saniya |
+Scenario: 1 Check if user is able to add a language 
+	Given I have clicked on the language tab under Profile page
+	When I press add on a new language
+	Then that language details should be displayed on my listings
